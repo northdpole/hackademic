@@ -91,7 +91,7 @@ abstract class HackademicController {
 			//error_log("session but not valid", 0);
 			Session::logout();
 			header('Location:'.SOURCE_ROOT_PATH."pages/home.php");
-
+			die();
 		}
 			//var_dump($_SESSION);
 			$this->smarty = new SmartyHackademic();

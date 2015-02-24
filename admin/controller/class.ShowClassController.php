@@ -43,7 +43,7 @@ class ShowClassController extends HackademicBackendController {
 		$this->setViewTemplate('showclass.tpl');
 
 		if (!isset($_GET['id'])) {
-			header('Location: '.SOURCE_ROOT_PATH."admin/pages/manageclass.php");
+			header('Location: '.SOURCE_ROOT_PATH."admin/pages/manageclass.php");die();
 		}
 		$class_id=$_GET['id'];
 

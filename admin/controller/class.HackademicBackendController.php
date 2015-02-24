@@ -43,7 +43,7 @@ class HackademicBackendController extends HackademicController {
 		elseif (!$this->isLoggedIn()) {
 			// Else if not logged in, go to login page
 			//error_log("HACKADEMIC:: admin dashboard FAILURE", 0);
-			header('Location: '.SOURCE_ROOT_PATH."admin/pages/login.php");
+			header('Location: '.SOURCE_ROOT_PATH."admin/pages/login.php");die();
 		} elseif ($this->isLoggedIn()) {
 			// Else if is logged in
 		 	if (($this->isAdmin() || ($this->isTeacher()))) {
