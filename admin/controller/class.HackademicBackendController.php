@@ -46,7 +46,7 @@ class HackademicBackendController extends HackademicController {
 			header('Location: '.SOURCE_ROOT_PATH."admin/pages/login.php");die();
 		} elseif ($this->isLoggedIn()) {
 			// Else if is logged in
-		 	if (this->isAdmin()|| this->isTeacher()) {
+		 	if ($this->isAdmin()|| $this->isTeacher()) {
 				// If is Admin or Teacher, go to Admin Dashboard
 				$menu=MenuController::go();
 				$this->addToView("main_menu_admin",$menu);
