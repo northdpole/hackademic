@@ -39,14 +39,14 @@ class HackademicBackendController extends HackademicController {
 	public function __construct() {
 		HackademicController::__construct();
 		// Login Controller, do nothing
-		if (get_class($this) == 'LoginController');
-		elseif (!$this->isLoggedIn()) {
+		if (get_class($this) == 'LoginController')
+			return;
+		if (!$this->isLoggedIn()) {
 			// Else if not logged in, go to login page
-			//error_log("HACKADEMIC:: admin dashboard FAILURE", 0);
 			header('Location: '.SOURCE_ROOT_PATH."admin/pages/login.php");die();
 		} elseif ($this->isLoggedIn()) {
 			// Else if is logged in
-		 	if (($this->isAdmin() || ($this->isTeacher()))) {
+		 	if (this->isAdmin()|| this->isTeacher()) {
 				// If is Admin or Teacher, go to Admin Dashboard
 				$menu=MenuController::go();
 				$this->addToView("main_menu_admin",$menu);
