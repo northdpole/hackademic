@@ -66,7 +66,7 @@ https://github.com/smarty-gettext/smarty-gettext
 
 2 line instructions:
 The settings are loaded in the master controller,
-In the templates include whatever you want to be translated in {}
+In the templates include whatever you want to be translated in {t} {/t}
 
 Contact Us
 ----------
